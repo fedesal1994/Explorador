@@ -25,6 +25,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main); // Asignamos el layout principal
         SDS = (GridView) findViewById(R.id.sdcards); // Definimos el grid
         SD_CARDS = getAllsds();  // Definimos las rutas de almacenamiento
+        //final GridAdapter gadapter = new GridAdapter(this,
+        //       R.layout.sdcards, SD_CARDS);
         Adapter gadapter = new Adapter(this, R.layout.sdcards, SD_CARDS); // Creamos un adaptador
         SDS.setAdapter(gadapter); // Le asignamos el adaptador al grid
         SDS.setOnItemClickListener(new OnItemClickListener() {
